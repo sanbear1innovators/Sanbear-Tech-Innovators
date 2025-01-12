@@ -67,6 +67,17 @@ body {
   font-family: var(--default-font);
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--heading-color);
+  font-family: var(--heading-font);
+}
+
 a {
   color: var(--accent-color);
   text-decoration: none;
