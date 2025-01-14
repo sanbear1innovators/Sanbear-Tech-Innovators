@@ -610,16 +610,19 @@
                       }
               
                       .compost-popup-content {
-                          background-color: #fff;
-                        margin-top: 80px;
-                        margin: auto; 
-                          padding: 20px;
-                          border-radius: 10px;
-                          width: 60%;
-                          max-width: 600px;
-                          max-height: 80%; /* Limit height for scrollability */
-                          overflow-y: auto; /* Enable vertical scrolling */
-                          position: relative;
+                       background-color: #fff;
+                       padding: 20px;
+                      border-radius: 10px;
+                      width: 60%;
+                      max-width: 600px;
+                      max-height: 80%; /* Limit height for scrollability */
+                      overflow-y: auto; /* Enable vertical scrolling */
+                      position: fixed; /* Ensures it's positioned relative to the viewport */
+                      top: 50%; /* Center vertically */
+                      left: 50%; /* Center horizontally */
+                      transform: translate(-50%, -50%); /* Offset by 50% of its own dimensions */
+                      }
+
                       }
               
                       .close-btn {
@@ -652,13 +655,31 @@
               <body>
               
                   <!-- Compost Button -->
-                  <button class="compost-btn" onclick="toggleCompostPopup()">🌿 Compost Making Steps</button>
+                  <button class="compost-btn" onclick="toggleCompostPopup()">🌿 Organic Waste</button>
               
                   <!-- Popup Content -->
                   <div id="compostPopup" class="compost-popup" onclick="closePopup(event)">
                       <div class="compost-popup-content">
                           <span class="close-btn" onclick="toggleCompostPopup()">×</span>
-                          <h2>Compost Making Process</h2>
+                          <h2>Organic Waste</h2>
+                        <p align="justify">Organic waste comes from living organisms such as humans, animals, and plants. It is biodegradable and can break down naturally. This type of waste is environmentally friendly and can be recycled into useful products. Examples include food scraps, vegetable leftovers, fruit peels, seeds, animal waste, and animal carcasses.</p>
+                        Organic waste is further divided into two types:
+                        <ol>
+                          <li>Wet Organic Waste: Waste with a high water content, such as vegetable scraps, fruit seeds, or leftover fruits.</li>
+                          <li>Dry Organic Waste: Waste with low water content, such as wood, branches, dry leaves, and seashells</li>
+                        </ol>
+                          <h3>Positive Impacts of Organic Waste</h3>
+                       <ul>
+                <li>Source of Compost Making: organic waste can be decomposed like food waste and can be used as an organic compost Organic Compost is useful for:
+                    <ul>
+                        <li>Land fertilizer.</li>
+                        <li>Reduces the use of dangerous chemical fertilizers that will lessen environmental pollution and prevent various diseases caused by excessive chemicals.</li>
+                        <li>Produces good nutrients as a source of food for plants</li>
+                    </ul>
+                </li>
+            </ul>
+                          <h3>Compost Making Process</h3>
+                        
                           <ol>
                               <li>Collect organic waste (food scraps, plant roots, old leaves, etc.).</li>
                               <li>Crush the waste into smaller pieces to speed up decomposition.</li>
