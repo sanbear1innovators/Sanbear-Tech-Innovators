@@ -1089,6 +1089,105 @@
 </script>
 
 </body>
+
+// STATISTIK KEDUA 
+
+<body>
+    <!-- Popup STATISTIK 2 with the chart and the button inside -->
+    <div id="b3WastePopup" class="info-popup" onclick="closePopup(event)">
+        <div class="info-popup-content">
+            <span class="close-btn" onclick="toggleInfoPopup('b3WastePopup')">×</span>
+            <h2<a href="https://www.cnbcindonesia.com/lifestyle/20240526181939-33-541216/5-negara-penghasil-sampah-laut-terbesar-di-dunia-ri-termasuk 
+">Countries that Contributes the Most on Plastic Waste in the World </a></h2>
+
+            <!-- The chart canvas -->
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+            <!-- Show Statistics Button inside the popup -->
+            <button class="show-statistics-btn" onclick="showStatistics()">Show Statistics</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to toggle the popup visibility
+        function toggleInfoPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
+        }
+
+        // Function to close the popup when clicking outside the content area
+        function closePopup(event) {
+            if (event.target === document.getElementById('b3WastePopup')) {
+                toggleInfoPopup('b3WastePopup');
+            }
+        }
+
+         // Function to format numbers with commas and decimals
+    function formatNumberWithCommasAndDecimals(number) {
+        return number.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 }); // Format with comma and one decimal
+    }
+
+    // Function to display the chart in the popup
+    function showStatistics() {
+        const dataValues = [3.53, 1.29, 1.90, 1.80, 1.60]; // Example data with decimals
+        const formattedData = dataValues.map(formatNumberWithCommasAndDecimals); // Format each number with commas and decimals
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const chart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['China', 'Indonesia', 'Philippines', 'Vietnam', 'Sri Lanka'],
+                datasets: [{
+                    label: '(ton)',
+                    data: dataValues, // Use raw data for charting
+                    backgroundColor: [
+                        'rgba(255, 99, 132, 0.2)',
+                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 205, 86, 0.2)',
+                        'rgba(75, 192, 192, 0.2)',
+                        'rgba(54, 162, 235, 0.2)',
+                        'rgba(153, 102, 255, 0.2)',
+                        'rgba(201, 203, 207, 0.2)'
+                    ],
+                    borderColor: [
+                        'rgb(255, 99, 132)',
+                        'rgb(255, 159, 64)',
+                        'rgb(255, 205, 86)',
+                        'rgb(75, 192, 192)',
+                        'rgb(54, 162, 235)',
+                        'rgb(153, 102, 255)',
+                        'rgb(201, 203, 207)'
+                    ],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    yAxes: [{
+                        ticks: {
+                            beginAtZero: true,
+                            callback: function(value) {
+                                return formatNumberWithCommasAndDecimals(value); // Format y-axis values with commas and decimals
+                            }
+                        }
+                    }]
+                }
+            }
+        });
+    }
+
+    // To display the popup and show the chart initially
+    window.onload = function() {
+        toggleInfoPopup('b3Waste'); // Open the popup
+        showStatistics(); // Display the chart
+    };
+</script>
+
+</body>
+
+
+  
 </html>
 
 
