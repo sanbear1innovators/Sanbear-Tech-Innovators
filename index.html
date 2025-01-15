@@ -992,37 +992,37 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
 
-<script>
-    // Function to display the popup
-    function toggleInfoPopup(popupId) {
-        const popup = document.getElementById(popupId + 'Popup');
-        popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
-    }
-
-    // Function to close the popup when clicking outside the content area
-    function closePopup(event) {
-        if (event.target === document.getElementById('b3WastePopup')) {
-            toggleInfoPopup('b3Waste');
+   <script>
+        // Function to toggle the popup visibility
+        function toggleInfoPopup(popupId) {
+            const popup = document.getElementById(popupId);
+            popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
         }
-    }
 
-    // Function to format numbers with commas and decimals
+        // Function to close the popup when clicking outside the content area
+        function closePopup(event) {
+            if (event.target === document.getElementById('b3WastePopup')) {
+                toggleInfoPopup('b3WastePopup');
+            }
+        }
+
+         // Function to format numbers with commas and decimals
     function formatNumberWithCommasAndDecimals(number) {
         return number.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 }); // Format with comma and one decimal
     }
 
     // Function to display the chart in the popup
     function showStatistics() {
-        const dataValues = [6545.8, 5959.3, 8090.1, 8100.6, 5610.4, 5500.7, 4000.9]; // Example data with decimals
+        const dataValues = [67.8, 68.5, 68.7, 69.9]; // Example data with decimals
         const formattedData = dataValues.map(formatNumberWithCommasAndDecimals); // Format each number with commas and decimals
 
         const ctx = document.getElementById('myChart').getContext('2d');
         const chart = new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                labels: ['2020', '2021', '2022', '2023'],
                 datasets: [{
-                    label: 'My First Dataset',
+                    label: '2020-2023 (ton)',
                     data: dataValues, // Use raw data for charting
                     backgroundColor: [
                         'rgba(255, 99, 132, 0.2)',
