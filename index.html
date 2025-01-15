@@ -1112,7 +1112,7 @@
 
         // Function to close the popup when clicking outside the content area
         function closePopup(event) {
-            if (event.target === document.getElementById('organicHealthPopup') || event.target === document.getElementById('inorganicWastePopup') || event.target === document.getElementById('b3WastePopup') || event.target === document.getElementById('worldWastePopup') || event.target === document.getElementById('lawsWastePopup')) {
+            if (event.target === document.getElementById('organicHealthPopup') || event.target === document.getElementById('inorganicWastePopup') || event.target === document.getElementById('b3WastePopup') || event.target === document.getElementById('lawsWastePopup')) {
                 toggleInfoPopup(event.target.id.replace('Popup', ''));
             }
         }
