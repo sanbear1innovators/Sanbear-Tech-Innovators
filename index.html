@@ -766,14 +766,14 @@
             background-color: #e76a1f;
         }
     
-        .hazardous-btn {
-            background-color: #ff8c00; /* Orange */
-        }
+       .hazardous-btn {
+        background-color: #28a745; /* Green */
+       }
 
         .hazardous-btn:hover {
-            background-color: #e76a1f;
+        background-color: #218838;
         }
-
+      
         .laws-btn {
             background-color: #ffeb3b; /* Yellow */
             color: black; /* Text color for visibility */
@@ -845,7 +845,7 @@
     <!-- Buttons to show popups -->
     <button class="info-btn organic-btn" onclick="toggleInfoPopup('organicHealth')"> 🗑️ Inorganic Waste</button>
     <button class="info-btn inorganic-btn" onclick="toggleInfoPopup('inorganicWaste')">⚠️ Hazardous Waste (B3)</button>
-    <button class="info-btn hazardous-btn" onclick="toggleInfoPopup('b3Waste')"></button>
+    <button class="info-btn hazardous-btn" onclick="toggleInfoPopup('b3Waste')">📊 Statistics </button>
     <button class="info-btn laws-btn" onclick="toggleInfoPopup('lawsWaste')">📜 Waste Management Laws</button>
 
     <!-- InOrganic Waste Popup -->
@@ -862,36 +862,27 @@
                         <li>Gas Inorganic Waste: Gases like factory emissions that pollute the air.</li>
                     </ul>
                 </li>
-                <li>Characteristics of Inorganic Waste:
-                    <ul>
-                        <li>Difficult to decompose.</li>
-                        <li>Made from synthetic or man-made materials.</li>
-                        <li>Can be recycled.</li>
-                    </ul>
-                </li>
-            </ul>
-            <h3>Positive Impacts of Inorganic Waste</h3>
-             <ul>
-                <li>As a future business idea. Inorganic waste can be useful if managed properly, one of ways is by recycling it. There are workshops such as “Trash 2 Move” which have developed a recycling business that turns inorganic waste into furniture, such as chairs, tables, bookshelves, etc. </li>        
-            </ul>
-            <h3>Negative Impacts of Inorganic Waste</h3>
-              <ul>
-                <li>Inorganic waste that is difficult to decompose naturally becomes pollution for the environment.
-                    <ul>
-                        <li>Water pollution: plastic waste that accumulates and is dumped into the ocean endangers many marine animals that die because they become entangled in plastic. In addition, the plastic that is discarded eventually breaks down into microplastics that can enter the human body through the seafood consumed.</li>
-                        <li>Soil pollution: plastic and styrofoam thrown away on the ground can cause soil pollution because these materials release harmful toxins. This can disrupt soil fertility and disturb the surrounding ecosystem.</li>
-                    </ul>
-                </li>
-            </ul>
-            
+            <h3>B3 Waste Processing</h3>
+             <ol>
+                <li>Stabilization method</li>     
+               <ul>Adds chemicals mixed with B3 waste to minimize the speed of movement of B3 waste so that it does not pollute the environment. The addition of these chemicals is used to bind or change hazardous materials in waste and this method is usually used in liquid waste processing.</ul>
+                <li>Solidification processing method</li> 
+               <ul>Adds additives to reduce the level of toxic substances in waste. The waste that uses this process is usually lime, cement and thermoplastic materials.</ul>
+                <li>Incineration processing method</li>    
+               <ul>Reduces the volume of B3 waste which is usually used for hospital waste or medical waste. This method uses high temperatures so that the waste can be destroyed. </ul>
+                <li>Thermal processing method</li> 
+               <ul>Similar to the incineration method, which uses very high temperatures. The difference is that the waste being processed is waste with very high levels of toxicity and is very dangerous. Apart from that, the supervising officer must also monitor the gas emissions produced so that they do not cause new pollution.</ul>
+                <li>Bioremediation processing method</li>    
+               <ul>Uses bacteria or microorganisms to reduce toxins in waste. These enzymes and bacteria are used to break down toxic waste. The advantage of this method is that it is environmentally friendly because the bacteria and enzymes used are natural, but this method requires a long time on a small scale.</ul>
+            </ol>
         </div>
     </div>
 
-    <!-- B3 Waste Popup -->
+    <!-- Statistics Waste Popup -->
     <div id="inorganicWastePopup" class="info-popup" onclick="closePopup(event)">
         <div class="info-popup-content">
             <span class="close-btn" onclick="toggleInfoPopup('inorganicWaste')">×</span>
-            <h2>Hazardous Waste (B3)</h2>
+            <h2>Statistics(B3)</h2>
                 <p align="justify">B3 waste is dangerous, toxic and can pollute the environment. This waste is the remainder of industrial activities and requires special processing to reduce or eliminate its dangerous toxic properties so that it does not pollute and endanger the environment. B3 waste must be collected and sent to the final processing site by an authorized government agency to ensure its safety. Examples include floor cleaners, batteries, glue, glass cleaners, used air fresheners, and other materials, most of which are made from chemicals.</p>
              <ul>
                 <li>According to Kompas, these are the characteristics of B3 waste:
