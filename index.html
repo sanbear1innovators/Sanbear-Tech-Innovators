@@ -932,61 +932,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hazardous Waste Statistics</title>
+    <title>Statistics Popup with Chart</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
     <style>
-        /* Popup Background */
+        /* Style for the popup */
         .info-popup {
-            display: none;
+            display: none; /* Initially hidden */
             position: fixed;
-            top: 0;
+            z-index: 1; /* On top of the content */
             left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 999;
+            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding-top: 60px;
         }
 
-        /* Popup Content */
         .info-popup-content {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
+            background-color: #fff;
+            margin: auto;
             padding: 20px;
             border-radius: 10px;
-            width: 80%;
+            width: 60%;
             max-width: 600px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            position: relative;
         }
 
-        /* Close Button */
         .close-btn {
+            color: #aaa;
+            font-size: 30px;
+            font-weight: bold;
             position: absolute;
             top: 10px;
-            right: 20px;
-            font-size: 20px;
-            color: #aaa;
+            right: 25px;
+        }
+
+        .close-btn:hover,
+        .close-btn:focus {
+            color: black;
+            text-decoration: none;
             cursor: pointer;
         }
 
-        .close-btn:hover {
-            color: black;
+        h2 {
+            text-align: center;
+            color: #359933;
+        }
+
+        /* Style for the button inside the popup */
+        .show-statistics-btn {
+            display: block;
+            margin: 20px auto;
+            padding: 10px 20px;
+            background-color: #2db44a;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .show-statistics-btn:hover {
+            background-color: #1e9e33;
         }
     </style>
 </head>
 <body>
-    <!-- Button to Show Popup -->
-    <button onclick="toggleInfoPopup('b3WastePopup')">Show Statistics</button>
-
-    <!-- Hazardous Waste Popup -->
+    <!-- Popup with the chart and the button inside -->
     <div id="b3WastePopup" class="info-popup" onclick="closePopup(event)">
         <div class="info-popup-content">
             <span class="close-btn" onclick="toggleInfoPopup('b3WastePopup')">×</span>
             <h2>Statistics Around the World</h2>
-            <!-- Chart -->
+
+            <!-- The chart canvas -->
             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+            <!-- Show Statistics Button inside the popup -->
+            <button class="show-statistics-btn" onclick="showStatistics()">Show Statistics</button>
         </div>
     </div>
 
@@ -994,29 +1016,25 @@
         // Function to toggle the popup visibility
         function toggleInfoPopup(popupId) {
             const popup = document.getElementById(popupId);
-            popup.style.display = popup.style.display === "block" ? "none" : "block";
-            // If showing the popup, initialize the chart
-            if (popup.style.display === "block") {
-                createChart();
-            }
+            popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
         }
 
-        // Close the popup when clicking outside the content
+        // Function to close the popup when clicking outside the content area
         function closePopup(event) {
-            if (event.target.classList.contains('info-popup')) {
-                document.getElementById('b3WastePopup').style.display = "none";
+            if (event.target === document.getElementById('b3WastePopup')) {
+                toggleInfoPopup('b3WastePopup');
             }
         }
 
-        // Create the Chart.js bar chart
-        function createChart() {
+        // Function to show the statistics (render the chart)
+        function showStatistics() {
             const ctx = document.getElementById('myChart').getContext('2d');
-            new Chart(ctx, {
+            const chart = new Chart(ctx, {
                 type: 'bar',
                 data: {
                     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
                     datasets: [{
-                        label: 'Hazardous Waste (in tons)',
+                        label: 'My First Dataset',
                         data: [65, 59, 80, 81, 56, 55, 40],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
@@ -1042,18 +1060,20 @@
                 options: {
                     responsive: true,
                     scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
+                        y: {
+                            beginAtZero: true
+                        }
                     }
                 }
             });
         }
+
+        // To display the popup initially
+        toggleInfoPopup('b3WastePopup');
     </script>
 </body>
 </html>
+
 
 
     <!-- Laws about Waste Popup -->
