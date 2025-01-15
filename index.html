@@ -1001,8 +1001,7 @@
     <!-- Popup with the chart and the button inside -->
     <div id="b3WastePopup" class="info-popup" onclick="closePopup(event)">
         <div class="info-popup-content">
-            <span class="close-btn" onclick="toggleInfoPopup('b3WastePopup')">×</span>
-            <h2>Statistics Around the World</h2>
+            <h2>The Average Amount of Trash in Indonesia Every Year <br> 2020-2023</h2>
 
             <!-- The chart canvas -->
             <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
@@ -1032,10 +1031,10 @@
             const chart = new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    labels: ['2020', '2021', '2022', '2023', 'May'],
                     datasets: [{
                         label: 'My First Dataset',
-                        data: [65, 59, 80, 81, 56, 55, 40],
+                        data: [67.8, 68.5, 68.7, 69.9],
                         backgroundColor: [
                             'rgba(255, 99, 132, 0.2)',
                             'rgba(255, 159, 64, 0.2)',
