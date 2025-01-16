@@ -846,7 +846,7 @@
     <button class="info-btn organic-btn" onclick="toggleInfoPopup('organicHealth')"> 🗑️ Inorganic Waste</button>
     <button class="info-btn inorganic-btn" onclick="toggleInfoPopup('inorganicWaste')">⚠️ Hazardous Waste (B3)</button>
     <button class="info-btn hazardous-btn" onclick="toggleInfoPopup('b3Waste')">📊 Indonesia Statistics </button>
-    <button class="info-btn laws-btn" onclick="toggleInfoPopup('lawsWaste')">📜 Waste Management Laws</button>
+    <button class="info-btn laws-btn" onclick="toggleInfoPopup('lawsWaste')">📊🌍 World Statistics </button>
 
     <!-- InOrganic Waste Popup -->
     <div id="organicHealthPopup" class="info-popup" onclick="closePopup(event)">
@@ -1013,25 +1013,25 @@
     </div>
 
     <script>
-        // Function to toggle the popup visibility
+        //toggle the popup visibility
         function toggleInfoPopup(popupId) {
             const popup = document.getElementById(popupId);
             popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
         }
 
-        // Function to close the popup when clicking outside the content area
+        //close the popup when clicking outside the content area
         function closePopup(event) {
             if (event.target === document.getElementById('b3WastePopup')) {
                 toggleInfoPopup('b3WastePopup');
             }
         }
 
-        // Function to format numbers with commas and decimals
+        // format numbers with commas and decimals
         function formatNumberWithCommasAndDecimals(number) {
             return number.toLocaleString('en-US', { minimumFractionDigits: 1, maximumFractionDigits: 1 });
         }
 
-        // Function to display the chart in the popup
+        // display chart
         function showStatistics() {
             const dataValues = [67.8, 68.5, 68.7, 69.9]; // Example data with decimals
             const ctx = document.getElementById('myChart').getContext('2d');
@@ -1078,7 +1078,7 @@
 
 
 
-    <!-- Laws about Waste Popup -->
+    <!--  World Waste Popup -->
    <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1150,7 +1150,7 @@
     </style>
 </head>
 <body>
-    <!-- Laws about Waste Popup -->
+    <!-- World Waste Popup -->
  <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1226,7 +1226,7 @@
     <div id="lawsWastePopup" class="info-popup" onclick="closePopup(event)">
         <div class="info-popup-content">
             <span class="close-btn" onclick="toggleInfoPopup('lawsWaste')">×</span>
-            <h2><a href="https://www.cnbcindonesia.com/lifestyle/20240526181939-33-541216/5-negara-penghasil-sampah-laut-terbesar-di-dunia-ri-termasuk" Countries that Contribute the Most to Plastic Waste in the World</a></h2>
+            <h2> Countries that Contribute the Most to Plastic Waste in the World</h2>
             <!-- Chart canvas -->
             <canvas id="lawsChart" style="width:100%;max-width:600px"></canvas>
 
