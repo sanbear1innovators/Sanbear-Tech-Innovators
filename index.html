@@ -1150,7 +1150,7 @@
     </style>
 </head>
 <body>
-    <!-- World Waste Popup -->
+    <!-- World Waste STATISTICS Popup -->
  <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1226,7 +1226,7 @@
     <div id="lawsWastePopup" class="info-popup" onclick="closePopup(event)">
         <div class="info-popup-content">
             <span class="close-btn" onclick="toggleInfoPopup('lawsWaste')">×</span>
-            <h2> Countries that Contribute the Most to Plastic Waste in the World</h2>
+            <h2> Countries that Contribute the Most Waste in the World</h2> <br><p><i>According to Databoks and World Bank Report</i></p>
             <!-- Chart canvas -->
             <canvas id="lawsChart" style="width:100%;max-width:600px"></canvas>
 
@@ -1257,12 +1257,12 @@
 
         // display chart
         function showLawsStatistics() {
-            const dataValues = [3.53, 1.29, 1.90, 1.80, 1.60]; 
+            const dataValues = [395.1, 265.2, 189.8, 79.1, 65.2]; 
             const ctx = document.getElementById('lawsChart').getContext('2d');
             new Chart(ctx, {
                 type: 'bar',
                 data: {
-                    labels: ['China', 'Indonesia', 'Philippine', 'Vietnam', 'Sri Lanka'], 
+                    labels: ['China', 'USA', 'India', 'Brazil', 'Indonesia'], 
                     datasets: [{
                         label: 'Plastic Waste (million tons)',
                         data: dataValues,
