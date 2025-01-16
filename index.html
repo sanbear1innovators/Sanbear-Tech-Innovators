@@ -926,7 +926,7 @@
         </div>
     </div>
 
-    <!-- Hazardous Waste Popup -->
+   <!-- Hazardous Waste Popup -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -979,7 +979,7 @@
             color: #359933;
         }
 
-        /* Style for the button inside the popup */
+        /* Style for the external button */
         .show-statistics-btn {
             display: block;
             margin: 20px auto;
@@ -999,7 +999,7 @@
 </head>
 <body>
     <!-- Button to open the popup -->
-    <button onclick="toggleInfoPopup('b3WastePopup')">Show Statistics</button>
+    <button class="show-statistics-btn" onclick="toggleInfoPopup('b3WastePopup')">Show Statistics</button>
 
     <!-- Popup with the chart -->
     <div id="b3WastePopup" class="info-popup" onclick="closePopup(event)">
@@ -1080,10 +1080,6 @@
     </script>
 </body>
 </html>
-
-
-
-
 
 
     <!-- Laws about Waste Popup -->
