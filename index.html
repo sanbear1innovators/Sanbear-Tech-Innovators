@@ -404,6 +404,147 @@
           <div class="tab-pane" id="departments-tab-4">
             <div class="row">
               <div class="col-lg-8 details order-2 order-lg-1">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation Section</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Style for the buttons */
+        button {
+            background-color: #4CAF50; /* Green */
+            color: white;
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            transition: 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Glow effect */
+        button::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 8px;
+            background: radial-gradient(circle, rgba(72, 239, 128, 0.4), transparent);
+            opacity: 0;
+            transition: opacity 0.4s;
+        }
+
+        button:hover::after {
+            opacity: 1;
+        }
+
+        button:hover {
+            box-shadow: 0 0 15px #4CAF50, 0 0 30px #4CAF50;
+        }
+
+        /* Overlay and Popup Styles */
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            border: 2px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+            border-radius: 10px;
+        }
+
+        .popup h3 {
+            margin-top: 0;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+            <button onclick="showPopup('recyper')">Recyper</button>
+        </div>
+    </div>
+</div>
+
+<!-- Popups -->
+<div class="overlay" id="overlay" onclick="hidePopup()"></div>
+
+<div class="popup" id="recyperPopup">
+    <h3>Recyper</h3>
+    <p>Recyper stands for "recycle paper," which is the process of turning used paper into new sheets of paper.</p>
+    <p><b>Steps:</b></p>
+    <ol>
+        <li>Collect used paper.</li>
+        <li>Cut the paper into small pieces and place them in a blender.</li>
+        <li>Blend the paper until smooth, then add water and blend again to create a paper pulp. Add color if desired, and blend again until evenly mixed.</li>
+        <li>Mix the paper pulp with water in a basin and stir well.</li>
+        <li>Dip a paper screen into the basin, ensuring an even layer of pulp covers the screen, and then gently lift it out.</li>
+        <li>Use a sponge to press the wet paper sheet onto a towel to remove excess water.</li>
+        <li>Once the paper sheet releases from the screen, let it dry for at least overnight. The finished paper is now ready to use.</li>
+    </ol>
+</div>
+
+<script>
+    function showPopup(type) {
+        document.getElementById('overlay').style.display = 'block';
+        if (type === 'recyper') {
+            document.getElementById('recyperPopup').style.display = 'block';
+        } else if (type === 'plasticTrader') {
+            document.getElementById('plasticTraderPopup').style.display = 'block';
+        }
+    }
+
+    function hidePopup() {
+        document.getElementById('overlay').style.display = 'none';
+        document.getElementById('recyperPopup').style.display = 'none';
+        document.getElementById('plasticTraderPopup').style.display = 'none';
+    }
+</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 
                 <p>
                   <!DOCTYPE html>
