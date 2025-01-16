@@ -926,6 +926,7 @@
         </div>
     </div>
 
+ <!-- STATISTICS --> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -994,29 +995,9 @@
         .show-statistics-btn:hover {
             background-color: #1e9e33;
         }
-
-        /* External button to open the popup */
-        .open-popup-btn {
-            display: block;
-            margin: 20px auto;
-            padding: 10px 20px;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 25px;
-            cursor: pointer;
-            text-align: center;
-        }
-
-        .open-popup-btn:hover {
-            background-color: #0056b3;
-        }
     </style>
 </head>
 <body>
-    <!-- Button to open the popup -->
-    <button class="open-popup-btn" onclick="toggleInfoPopup('b3WastePopup')">Open Statistics Popup</button>
-
     <!-- Popup with the chart -->
     <div id="b3WastePopup" class="info-popup" onclick="closePopup(event)">
         <div class="info-popup-content">
@@ -1024,7 +1005,7 @@
             <h2>Statistics Around the World</h2>
 
             <!-- The chart canvas -->
-            <canvas id="myChart" style="width:100%;max-width:600px; display: none;"></canvas>
+            <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
 
             <!-- Show Statistics Button inside the popup -->
             <button class="show-statistics-btn" onclick="showStatistics()">Show Statistics</button>
@@ -1052,10 +1033,8 @@
 
         // Function to display the chart in the popup
         function showStatistics() {
-            const chartCanvas = document.getElementById('myChart');
-            chartCanvas.style.display = "block"; // Show the chart canvas
             const dataValues = [67.8, 68.5, 68.7, 69.9]; // Example data with decimals
-            const ctx = chartCanvas.getContext('2d');
+            const ctx = document.getElementById('myChart').getContext('2d');
             new Chart(ctx, {
                 type: 'bar',
                 data: {
@@ -1096,6 +1075,7 @@
     </script>
 </body>
 </html>
+
 
 
     <!-- Laws about Waste Popup -->
