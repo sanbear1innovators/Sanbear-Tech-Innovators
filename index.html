@@ -535,14 +535,44 @@
 
 <div class="popup" id="plasticTraderPopup">
     <h3>Plastic Trader</h3>
-    <p>This trash can encourages people to collect and dispose plastic bottle waste into this machine.</p>
+    <p>This trash can encourages people to collect and dispose of plastic bottle waste into this machine.</p>
     <p><b>This machine will:</b></p>
     <ul>
         <li>Collect plastic bottle waste that has been separated from the labels and caps.</li>
         <li>Press the waste into blocks that are easy to move and reprocess.</li>
     </ul>
     <p>In return, people can get points for every bottle they throw away, which can be exchanged for eco-friendly merchandise such as cloth shopping bags, tumblers, and lunch boxes.</p>
+
+    <!-- Buttons with links -->
+    <a href="simulation-video-link.html" class="action-btn" target="_blank">Simulation Video</a>
+    <a href="illustration-link.html" class="action-btn" target="_blank">Illustration</a>
 </div>
+
+<!-- Add additional styles -->
+<style>
+    .action-btn {
+        display: inline-block;
+        background-color: #28a745; /* Matching green tone */
+        color: white;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 15px;
+        margin: 10px 5px;
+        border: none;
+        border-radius: 8px;
+        text-decoration: none; /* Remove underline */
+        text-transform: uppercase;
+        text-align: center;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .action-btn:hover {
+        background-color: #218838; /* Darker green for hover */
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+</style>
+
 
 <script>
     function showPopup(type) {
@@ -560,7 +590,6 @@
         document.getElementById('plasticTraderPopup').style.display = 'none';
     }
 </script>
-
 </body>
 </html>
 
