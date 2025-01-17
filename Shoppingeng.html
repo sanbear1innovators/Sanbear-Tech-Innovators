@@ -32,103 +32,96 @@
   <link href="shopping.css" rel="stylesheet">
 
   
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sticky Navbar</title>
-    <style>
-        /* General Styles */
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        /* Sticky Navbar */
-        header#header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            background-color: white;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 10px 20px;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            display: flex;
-            gap: 15px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: black;
-        }
-
-        /* Popup Styling */
-        .popup, #popupBackdrop {
-            display: none;
-        }
-
-        .popup {
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
-            z-index: 1000;
-            text-align: center;
-        }
-
-        #popupBackdrop {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 999;
-        }
-    </style>
 </head>
-<body>
-    <!-- Navbar -->
-    <header id="header">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <!-- Popup -->
-    <div id="popupBackdrop" onclick="closePopup()"></div>
-    <div id="popupMessage" class="popup">
-        <p>Thank you for contacting us!</p>
-        <p><b>Email:</b> example@example.com</p>
-        <button onclick="closePopup()">Close</button>
+<body class="index-page">
+
+  <header id="header" class="header sticky-top">
+
+    <div class="topbar d-flex align-items-center">
+      <div class="container d-flex justify-content-center justify-content-md-between">
+        <div class="contact-info d-flex align-items-center">
+          <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:maria.dominika@sma.santaursulajakarta.sch.id"><b>Sanbeartech@gmail.com</b></a></i>
+          <i class="bi bi-phone d-flex align-items-center ms-4"><span>+62 857-7282-1240</span></i>
+        </div>
+        <div class="social-links d-none d-md-flex align-items-center">
+          <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+          <a href="https://www.instagram.com/sanbear.inv/?igsh=ZnV0dHkxZXY5bW45" class="instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+          <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+        </div>
+      </div>
+    </div><!-- End Top Bar -->
+
+    <div class="branding d-flex align-items-center">
+
+      <div class="container position-relative d-flex align-items-center justify-content-between">
+        <a href="index.html" class="logo d-flex align-items-center me-auto">
+          <!-- Uncomment the line below if you also wish to use an image logo -->
+          <!-- <img src="assets/img/logo.png" alt=""> -->
+          <h1 class="sitename"><font size="6">Sanbear Tech</font></h1>
+        </a>
+
+        <nav id="navmenu" class="navmenu">
+          <ul>
+            <li><a href="#hero" class="active">Home<br></a></li>
+            <li><a href="#about">About</a></li>
+            <li class="dropdown"><a href="#departments"><span>Innovation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li class="dropdown"><a href="#departments"><span>Issues</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#departments">Indonesia 🦅</a></li>
+                    <li><a href="#departments">Global 🫂</a></li>
+                  </ul>
+      
+                </li>
+                <li class="dropdown"><a href="#departments"><span>EcoSTEM</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#departments">Waste Categories and Impact 🚮</a></li>
+                    <li><a href="#departments">Waste Statistics ⛷️</a></li>
+
+                  </ul>
+      
+                </li>
+                <li class="dropdown"><a href="#departments"><span>Solutions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                  <ul>
+                    <li><a href="#departments">Reuse 🪴</a></li>
+                    <li><a href="#departments">Recycle 🥬</a></li>
+                    <li><a href="#departments">Waste Management Laws 📜</a></li>
+
+                  </ul>
+                </li>
+                
+                <li class="dropdown"><a href="#departments"><span><font color="#009900">Implementasi</font></span> </a>
+                  <ul>
+                    <li><a href="#departments"><font color="#4F7942">Recyper ♻️</font></a></li>
+                    <li><a href="#departments"><font color="#004d00">Plastic Trader</font></a></li>
+
+                  </ul>
+
+              </ul>
+            </li>
+            <li><a href="gameseng.html">Games</a></li>
+            <li><a href="Shoppingeng.html">Shopping</a></li>
+            <li><a href="#doctors">Innovators</a></li>
+            <li class="dropdown"><a href="#"><span>Languages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+              <ul>
+                <li><a href="indo.html">Indonesian Language</a></li>
+                <li><a href="index.html">English</a></li>
+              </ul>
+            </li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+        </nav>
+
+        <a class="cta-btn d-none d-sm-block" href="indexform.html"><b>Join Us</b></a>
+
+      </div>
+
     </div>
 
-    <script>
-        function showPopup() {
-            document.getElementById("popupMessage").style.display = "block";
-            document.getElementById("popupBackdrop").style.display = "block";
-        }
+  </header>
 
-        function closePopup() {
-            document.getElementById("popupMessage").style.display = "none";
-            document.getElementById("popupBackdrop").style.display = "none";
-        }
-    </script>
-</body>
-</html>
 
 
     <!-- Popup Structure -->
