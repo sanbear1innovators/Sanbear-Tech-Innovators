@@ -55,85 +55,37 @@
             padding: 10px 20px;
         }
 
-        .branding {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
-
-        .navmenu ul {
+        nav ul {
             list-style: none;
-            margin: 0;
             padding: 0;
             display: flex;
             gap: 15px;
         }
 
-        .navmenu ul li {
-            display: inline-block;
-        }
-
-        .navmenu ul li a {
+        nav ul li a {
             text-decoration: none;
             color: black;
-            padding: 5px 10px;
         }
 
-        .cta-btn {
-            background-color: green;
-            color: white;
-            padding: 10px 15px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-        }
-
-        /* Example Content */
-        .content {
-            height: 2000px;
-            padding: 20px;
-        }
-
-        /* Popup styling */
-        .popup {
+        /* Popup Styling */
+        .popup, #popupBackdrop {
             display: none;
+        }
+
+        .popup {
             position: fixed;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: #ffffff;
+            background: white;
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 40px rgba(0, 0, 0, 0.2);
             z-index: 1000;
-            width: 90%;
-            max-width: 500px;
             text-align: center;
-            animation: popOut 0.5s ease-in-out;
-        }
-
-        .popup p {
-            margin-bottom: 15px;
-            font-size: 16px;
-            color: #1c3b12;
-        }
-
-        .popup button {
-            background-color: #327633bc;
-            color: #fff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .popup button:hover {
-            background-color: #275525;
         }
 
         #popupBackdrop {
-            display: none;
             position: fixed;
             top: 0;
             left: 0;
@@ -142,45 +94,42 @@
             background: rgba(0, 0, 0, 0.5);
             z-index: 999;
         }
-
-        @keyframes popOut {
-            0% {
-                transform: translate(-50%, -50%) scale(0.5);
-                opacity: 0;
-            }
-            100% {
-                transform: translate(-50%, -50%) scale(1);
-                opacity: 1;
-            }
-        }
     </style>
 </head>
 <body>
-
-    <!-- Sticky Navbar -->
-    <header id="header" class="header">
-        <div class="branding">
-            <div class="container">
-                <a href="index.html" class="logo">
-                    <p style="color: green; font-size: 1.55rem; margin: 0;">
-                        <b>Sanbear Shop</b>
-                    </p>
-                </a>
-
-                <nav id="navmenu" class="navmenu">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="innovation.html">Innovation</a></li>
-                        <li><a href="games.html">Games</a></li>
-                        <li><a href="shopping.html">Shopping</a></li>
-                        <li><a href="innovators.html">Innovators</a></li>
-                    </ul>
-                </nav>
-                <a class="cta-btn" href="join.html"><b>Join Us</b></a>
-            </div>
-        </div>
+    <!-- Navbar -->
+    <header id="header">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
+
+    <!-- Popup -->
+    <div id="popupBackdrop" onclick="closePopup()"></div>
+    <div id="popupMessage" class="popup">
+        <p>Thank you for contacting us!</p>
+        <p><b>Email:</b> example@example.com</p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function showPopup() {
+            document.getElementById("popupMessage").style.display = "block";
+            document.getElementById("popupBackdrop").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popupMessage").style.display = "none";
+            document.getElementById("popupBackdrop").style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
 
     <!-- Popup Structure -->
     <div id="popupBackdrop" onclick="closePopup()"></div>
