@@ -159,6 +159,56 @@
 
     <!-- Sticky Navbar -->
     <header id="header" class="header">
+        <div class="branding">
+            <div class="container">
+                <a href="index.html" class="logo">
+                    <p style="color: green; font-size: 1.55rem; margin: 0;">
+                        <b>Sanbear Shop</b>
+                    </p>
+                </a>
+
+                <nav id="navmenu" class="navmenu">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="innovation.html">Innovation</a></li>
+                        <li><a href="games.html">Games</a></li>
+                        <li><a href="shopping.html">Shopping</a></li>
+                        <li><a href="innovators.html">Innovators</a></li>
+                    </ul>
+                </nav>
+                <a class="cta-btn" href="join.html"><b>Join Us</b></a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Popup Structure -->
+    <div id="popupBackdrop" onclick="closePopup()"></div>
+    <div id="popupMessage" class="popup">
+        <p>Thank you for contacting us! We look forward to hearing from you again. 😊</p>
+        <p><b>Email:</b> <span>maria.dominika@sma.santaursulajakarta.sch.id</span></p>
+        <p><b>Phone:</b> <span>+62 857-7282-1240</span></p>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <!-- JavaScript -->
+    <script>
+        function showPopup() {
+            document.getElementById("popupMessage").style.display = "block";
+            document.getElementById("popupBackdrop").style.display = "block";
+        }
+
+        function closePopup() {
+            document.getElementById("popupMessage").style.display = "none";
+            document.getElementById("popupBackdrop").style.display = "none";
+        }
+    </script>
+</body>
+</html>
+
+
+    <!-- Sticky Navbar -->
+    <header id="header" class="header">
         <div class="branding d-flex align-items-center">
             <div class="container position-relative d-flex align-items-center justify-content-between">
                 <a href="index.html" class="logo d-flex align-items-center me-auto">
