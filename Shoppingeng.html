@@ -32,65 +32,68 @@
   <link href="shopping.css" rel="stylesheet">
 
   
-</head>
-<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sticky Navbar</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
 
-  <!-- ======= Header ======= -->
-<header>
-  <header id="header" class="header sticky-top">
-  <div class="branding d-flex align-items-center">
-    <div class="container position-relative d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <p style="color: green; font-size: 1.55rem; margin: 0; display: flex; align-items: center;">
-          <b><i class="bi bi-bag-heart"></i> Sanbear Shop</b>
-        </p>
-          </a>
+        /* Sticky Navbar */
+        header#header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: white;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 10px 20px;
+        }
 
-        <nav id="navmenu" class="navmenu">
-      <ul>
-              <li><a href="index.html">Home<br></a></li>
-              <li><a href="index.html">About</a></li>
-              <li class="dropdown"><a href="index.html#departments"><span>Innovation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li class="dropdown"><a href="index.html#departments"><span>Issues</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                      <li><a href="index.html#departments">Indonesia 🦅</a></li>
-                      <li><a href="index.html#departments">Global 🫂</a></li>
-                    </ul>
-                  </li>
-                    <li class="dropdown"><a href="index.html#departments"><span>EcoSTEM</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                      <li><a href="index.html#departments">Waste Categories and Impact 🚮</a></li>
-                      <li><a href="index.html#departments">Waste Statistics ⛷️</a></li>
-                    </ul>
-                  </li>
-                  <li class="dropdown"><a href="index.html#departments"><span>Solusi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                    <ul>
-                      <li><a href="index.html#departments">Reuse 🪴</a></li>
-                      <li><a href="index.html#departments">Recycle 🥬</a></li>
-                      <li><a href="index.html#departments">Waste Management Laws 📜</a></li>
+        .branding {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
 
-                    </ul>
-                  </li>
-                  
-                  <li class="dropdown"><a href="#departments"><span><font color="#009900">Implementation</font></span> </a>
-                    <ul>
-                      <li><a href="#departments"><font color="#4F7942">Recyper ♻️</font></a></li>
-                      <li><a href="#departments"><font color="#004d00">Plastic Trader</font></a></li>  
-                    </ul>
-  
-                </ul>
-                </li>
-              <li><a href="gameseng.html">Games</a></li>
-              <li><a href="Shoppingeng.html" class="active">Shopping</a></li>
-              <li><a href="index.html">Innovators</a></li>
-              <li class="dropdown"><a href="#"><span>Languages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-                <ul>
-                  <li><a href="shoppingindo.html">Bahasa Indonesia</a></li>
-                  <li><a href="Shoppingeng.html">English</a></li>
-                </ul>
-              </li>
-<style>
+        .navmenu ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 15px;
+        }
+
+        .navmenu ul li {
+            display: inline-block;
+        }
+
+        .navmenu ul li a {
+            text-decoration: none;
+            color: black;
+            padding: 5px 10px;
+        }
+
+        .cta-btn {
+            background-color: green;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        /* Example Content */
+        .content {
+            height: 2000px;
+            padding: 20px;
+        }
+
         /* Popup styling */
         .popup {
             display: none;
@@ -150,30 +153,77 @@
                 opacity: 1;
             }
         }
-     
     </style>
-
-    
 </head>
-
 <body>
-    <!-- Navigation Bar -->
-    <ul>
-        <li>
-            <a href="#" onclick="showPopup()">Contact</a>
-        </li>
-    </ul>
 
+    <!-- Sticky Navbar -->
+    <header id="header" class="header">
+        <div class="branding d-flex align-items-center">
+            <div class="container position-relative d-flex align-items-center justify-content-between">
+                <a href="index.html" class="logo d-flex align-items-center me-auto">
+                    <p style="color: green; font-size: 1.55rem; margin: 0; display: flex; align-items: center;">
+                        <b><i class="bi bi-bag-heart"></i> Sanbear Shop</b>
+                    </p>
+                </a>
+
+                    <nav id="navmenu" class="navmenu">
+      <ul>
+              <li><a href="index.html">Home<br></a></li>
+              <li><a href="index.html">About</a></li>
+              <li class="dropdown"><a href="index.html#departments"><span>Innovation</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li class="dropdown"><a href="index.html#departments"><span>Issues</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="index.html#departments">Indonesia 🦅</a></li>
+                      <li><a href="index.html#departments">Global 🫂</a></li>
+                    </ul>
+                  </li>
+                    <li class="dropdown"><a href="index.html#departments"><span>EcoSTEM</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="index.html#departments">Waste Categories and Impact 🚮</a></li>
+                      <li><a href="index.html#departments">Waste Statistics ⛷️</a></li>
+                    </ul>
+                  </li>
+                  <li class="dropdown"><a href="index.html#departments"><span>Solusi</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                    <ul>
+                      <li><a href="index.html#departments">Reuse 🪴</a></li>
+                      <li><a href="index.html#departments">Recycle 🥬</a></li>
+                      <li><a href="index.html#departments">Waste Management Laws 📜</a></li>
+
+                    </ul>
+                  </li>
+                  
+                  <li class="dropdown"><a href="#departments"><span><font color="#009900">Implementation</font></span> </a>
+                    <ul>
+                      <li><a href="#departments"><font color="#4F7942">Recyper ♻️</font></a></li>
+                      <li><a href="#departments"><font color="#004d00">Plastic Trader</font></a></li>  
+                    </ul>
+  
+                </ul>
+                </li>
+              <li><a href="gameseng.html">Games</a></li>
+              <li><a href="Shoppingeng.html" class="active">Shopping</a></li>
+              <li><a href="index.html">Innovators</a></li>
+              <li class="dropdown"><a href="#"><span>Languages</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+                <ul>
+                  <li><a href="shoppingindo.html">Bahasa Indonesia</a></li>
+                  <li><a href="Shoppingeng.html">English</a></li>
+                </ul>
+              </li>
+
+                <a class="cta-btn d-none d-sm-block" href="index.html"><b>Join Us</b></a>
+            </div>
+        </div>
+    </header>
+
+  
     <!-- Popup Structure -->
     <div id="popupBackdrop" onclick="closePopup()"></div>
     <div id="popupMessage" class="popup">
-      <p>                <p>Terima kasih sudah mengkontaki kami! Kami harap dapat bertemu lagi nanti 😊
-        
-        <br>
-        <b><font color = black><p align=left>E-mail      :</font><font color= grey>@maria.dominika@sma.santaursulajakarta.sch.id</font></p></b>
-        <b><font color = black><p align=left>Phone number:</font><font color= grey>+62 857-7282-1240</font></p></b>
-
-      </p>
+        <p>Thank you for contacting us! We look forward to hearing from you again. 😊</p>
+        <p><b>Email:</b> <span>@maria.dominika@sma.santaursulajakarta.sch.id</span></p>
+        <p><b>Phone:</b> <span>+62 857-7282-1240</span></p>
         <button onclick="closePopup()">Close</button>
     </div>
 
@@ -188,13 +238,10 @@
             document.getElementById("popupMessage").style.display = "none";
             document.getElementById("popupBackdrop").style.display = "none";
         }
-    </script>            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-          </nav>
-  
-          <a class="cta-btn d-none d-sm-block" href="index.html"><b>Join Us</b></a>
-  
-</div></div></header></header>
+    </script>
+</body>
+</html>
+
 
   
 
