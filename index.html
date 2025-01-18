@@ -551,7 +551,7 @@
 <style>
     .action-btn {
         display: inline-block;
-        background-color: #28a745; /* Matching green tone */
+        background-color: #28a745; 
         color: white;
         font-size: 16px;
         font-weight: bold;
@@ -559,7 +559,7 @@
         margin: 10px 5px;
         border: none;
         border-radius: 8px;
-        text-decoration: none; /* Remove underline */
+        text-decoration: none; 
         text-transform: uppercase;
         text-align: center;
         transition: all 0.3s ease;
@@ -568,13 +568,13 @@
 
     .action-btn:hover {
         color: white;
-        background-color: #28a745; /* Maintain the same background */
-        box-shadow: 0 0 15px #28a745, 0 0 30px #28a745, 0 0 45px #28a745; /* Glowing effect */
-        transform: scale(1.05); /* Slight zoom effect */
+        background-color: #28a745; 
+        box-shadow: 0 0 15px #28a745, 0 0 30px #28a745, 0 0 45px #28a745; 
+        transform: scale(1.05); 
     }
 
     .action-btn:active {
-        transform: scale(0.98); /* Subtle click effect */
+        transform: scale(0.98); 
     }
 </style>
 
@@ -650,7 +650,7 @@
                           top: 0;
                           width: 100%;
                           height: 100%;
-                          background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+                          background-color: rgba(0, 0, 0, 0.5); 
                           padding-top: 60px;
                       }
               
@@ -798,7 +798,7 @@
 
         /* Specific Button Colors */
         .organic-btn {
-            background-color: #ff6347; /* Tomato */
+            background-color: #ff6347; 
         }
 
         .organic-btn:hover {
@@ -806,7 +806,7 @@
         }
 
        .inorganic-btn {
-            background-color: #ff8c00; /* Orange */
+            background-color: #ff8c00; 
         }
 
         .inorganic-btn:hover {
@@ -814,7 +814,7 @@
         }
     
        .hazardous-btn {
-        background-color: #28a745; /* Green */
+        background-color: #28a745; 
        }
 
         .hazardous-btn:hover {
@@ -822,8 +822,8 @@
         }
       
         .laws-btn {
-            background-color: #ffeb3b; /* Yellow */
-            color: black; /* Text color for visibility */
+            background-color: #ffeb3b; 
+            color: black; 
         }
 
         .laws-btn:hover {
@@ -832,14 +832,14 @@
 
         /* Popup Styles */
         .info-popup {
-            display: none; /* Initially hidden */
+            display: none; 
             position: fixed;
-            z-index: 1; /* On top of the content */
+            z-index: 1; 
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.5); 
             padding-top: 60px;
         }
 
@@ -850,8 +850,8 @@
             border-radius: 10px;
             width: 60%;
             max-width: 600px;
-            max-height: 80%; /* Limit height for scrollability */
-            overflow-y: auto; /* Enable vertical scrolling */
+            max-height: 80%; /*scrollability */
+            overflow-y: auto; /* vertical scrolling */
             position: relative;
         }
 
@@ -978,14 +978,14 @@
     <style>
         /* Style for the popup */
         .info-popup {
-            display: none; /* Initially hidden */
+            display: none; /* hidden */
             position: fixed;
-            z-index: 1; /* On top of the content */
+            z-index: 1; /*top of the content */
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.5); 
             padding-top: 60px;
         }
 
@@ -1202,14 +1202,14 @@
     <style>
         /* Style for the popup */
         .info-popup {
-            display: none; /* Initially hidden */
+            display: none; /* hidden */
             position: fixed;
-            z-index: 1; /* On top of the content */
+            z-index: 1; /* top of the content */
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            background-color: rgba(0, 0, 0, 0.5); 
             padding-top: 60px;
         }
 
@@ -1277,13 +1277,13 @@
     </div>
 
     <script>
-        // Function to toggle the specific popup
+        //toggle the specific popup
         function toggleInfoPopup(popupId) {
             const popup = document.getElementById(popupId + 'Popup');
             popup.style.display = (popup.style.display === "none" || popup.style.display === "") ? "block" : "none";
         }
 
-        // Function to close the popup when clicking outside the content area
+        // close the popup when clicking outside the content area
         function closePopup(event) {
             const popups = ['organicHealthPopup', 'inorganicWastePopup', 'b3WastePopup', 'lawsWastePopup'];
             if (popups.includes(event.target.id)) {
